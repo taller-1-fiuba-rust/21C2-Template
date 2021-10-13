@@ -52,11 +52,11 @@ jobs:
           args: --manifest-path client/Cargo.toml
 
       - run: rustup component add rustfmt
-        working-directory: ./client
+        # working-directory: ./client
       - uses: actions-rs/cargo@v1
         with:
           command: fmt
-          args: --all -- --check --manifest-path client/Cargo.toml
+          args: --manifest-path client/Cargo.toml --all -- --check 
 
   clippy-client:
     name: Clippy client
@@ -75,4 +75,4 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -D warnings --manifest-path client/Cargo.toml
+          args: --manifest-path client/Cargo.toml -- -D warnings 
