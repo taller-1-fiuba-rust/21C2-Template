@@ -1,4 +1,10 @@
-on: [pull_request]
+on: 
+  push:
+    branches:
+      - 'server/**'
+  pull-request:
+    branches: 
+      - main
 
 name: Continuous integration
 

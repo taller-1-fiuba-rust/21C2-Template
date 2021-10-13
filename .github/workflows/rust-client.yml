@@ -1,7 +1,10 @@
 on: 
   push:
     branches:
-      - 'client/**'
+      - 'server/**'
+  pull-request:
+    branches: 
+      - main
 
 name: Continuous integration
 
