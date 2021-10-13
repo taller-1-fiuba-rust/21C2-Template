@@ -52,7 +52,6 @@ jobs:
           args: --manifest-path client/Cargo.toml
 
       - run: rustup component add rustfmt
-        # working-directory: ./client
       - uses: actions-rs/cargo@v1
         with:
           command: fmt
@@ -71,7 +70,6 @@ jobs:
           args: --manifest-path client/Cargo.toml
 
       - run: rustup component add clippy
-        working-directory: ./client
       - uses: actions-rs/cargo@v1
         with:
           command: clippy
